@@ -7,6 +7,13 @@ export NVM_DIR="$HOME/.nvm"
 # added by Anaconda3 installer
 export PATH="/home/nick/anaconda3/bin:$PATH"
 
-export GOPATH="/home/nick/go"
+export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$GOBIN:$PATH"
+
+
+# Bins
+export PATH="$HOME/bin:$PATH"
+
+# cuda
+export LD_LIBRARY_PATH="$HOME/openmpi/lib:$LD_LIBRARY_PATH"

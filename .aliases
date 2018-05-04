@@ -35,3 +35,11 @@ alias prikey="more ~/.ssh/id_ed25519 | xclip -selection clipboard | echo '=> Pri
 
 alias dl='cd ~/Downloads'
 alias dsktp='cd ~/Desktop'
+
+alias sudoeh='sudo -E -H'
+
+# Hardware temperature
+alias tempstat="paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/class/thermal/thermal_zone*/temp) | column -s $'\t' -t"
+
+# Fast file copy over ssh
+alias rscp='rsync -rtXx --numeric-ids --progress -e "ssh -T -c aes128-ctr -o Compression=no -x"'

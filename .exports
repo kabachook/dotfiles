@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export DRONE_SERVER=
+export DRONE_TOKEN=
