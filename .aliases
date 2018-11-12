@@ -43,3 +43,20 @@ alias tempstat="paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/cl
 
 # Fast file copy over ssh
 alias rscp='rsync -rtXx --numeric-ids --progress -e "ssh -T -c aes128-ctr -o Compression=no -x"'
+
+# Allow running gui apps as root
+alias allowgui='xhost si:localuser:root'
+alias disallowgui='xhost -si:localuser:root'
+
+# Docker shortcuts
+alias drgui='docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw'
+alias dockergcc='docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp gcc:latest gcc'
+alias dockergpp='docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp gcc:latest g++'
+alias dockermake='docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp gcc:latest make'
+
+# VPN
+alias vpn='sudo openvpn --config $HOME/configs/fehyjn.ovpn'
+
+# Colorful ip
+alias ip='ip --color'
+alias ipb='ip --color --brief'
